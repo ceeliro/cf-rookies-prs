@@ -17,6 +17,38 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ceeliro-common": [
+        "dist/ceeliro-common"
+      ],
+      "ceeliro-common/*": [
+        "dist/ceeliro-common/*"
+      ],
+      "ceeliro-charts": [
+        "dist/ceeliro-charts"
+      ],
+      "ceeliro-charts/*": [
+        "dist/ceeliro-charts/*"
+      ],
+      "ceeliro-oauth": [
+        "dist/ceeliro-oauth"
+      ],
+      "ceeliro-oauth/*": [
+        "dist/ceeliro-oauth/*"
+      ],
+      "ceeliro-forms": [
+        "dist/ceeliro-forms"
+      ],
+      "ceeliro-forms/*": [
+        "dist/ceeliro-forms/*"
+      ],
+      "ceeliro-amaterial": [
+        "dist/ceeliro-amaterial"
+      ],
+      "ceeliro-amaterial/*": [
+        "dist/ceeliro-amaterial/*"
+      ]
+    }
   }
 }

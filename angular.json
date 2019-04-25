@@ -2,5 +2,451 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "cf-rookies-prs": {
+      "root": "projects/cf-rookies-prs/",
+      "sourceRoot": "projects/cf-rookies-prs/src",
+      "projectType": "application",
+      "prefix": "rookies-prs",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cf-rookies-prs",
+            "index": "projects/cf-rookies-prs/src/index.html",
+            "main": "projects/cf-rookies-prs/src/main.ts",
+            "polyfills": "projects/cf-rookies-prs/src/polyfills.ts",
+            "tsConfig": "projects/cf-rookies-prs/tsconfig.app.json",
+            "assets": [
+              "projects/cf-rookies-prs/src/favicon.ico",
+              "projects/cf-rookies-prs/src/assets"
+            ],
+            "styles": [
+              "projects/cf-rookies-prs/src/styles.scss"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/cf-rookies-prs/src/environments/environment.ts",
+                  "with": "projects/cf-rookies-prs/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "cf-rookies-prs:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "cf-rookies-prs:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cf-rookies-prs:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cf-rookies-prs/src/test.ts",
+            "polyfills": "projects/cf-rookies-prs/src/polyfills.ts",
+            "tsConfig": "projects/cf-rookies-prs/tsconfig.spec.json",
+            "karmaConfig": "projects/cf-rookies-prs/karma.conf.js",
+            "styles": [
+              "projects/cf-rookies-prs/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/cf-rookies-prs/src/favicon.ico",
+              "projects/cf-rookies-prs/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cf-rookies-prs/tsconfig.app.json",
+              "projects/cf-rookies-prs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "cf-rookies-prs-e2e": {
+      "root": "projects/cf-rookies-prs-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/cf-rookies-prs-e2e/protractor.conf.js",
+            "devServerTarget": "cf-rookies-prs:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "cf-rookies-prs:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/cf-rookies-prs-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-profile": {
+      "root": "projects/ceeliro-profile/",
+      "sourceRoot": "projects/ceeliro-profile/src",
+      "projectType": "application",
+      "prefix": "cl-profile",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ceeliro-profile",
+            "index": "projects/ceeliro-profile/src/index.html",
+            "main": "projects/ceeliro-profile/src/main.ts",
+            "polyfills": "projects/ceeliro-profile/src/polyfills.ts",
+            "tsConfig": "projects/ceeliro-profile/tsconfig.app.json",
+            "assets": [
+              "projects/ceeliro-profile/src/favicon.ico",
+              "projects/ceeliro-profile/src/assets"
+            ],
+            "styles": [
+              "projects/ceeliro-profile/src/styles.scss"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ceeliro-profile/src/environments/environment.ts",
+                  "with": "projects/ceeliro-profile/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ceeliro-profile:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ceeliro-profile:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ceeliro-profile:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceeliro-profile/src/test.ts",
+            "polyfills": "projects/ceeliro-profile/src/polyfills.ts",
+            "tsConfig": "projects/ceeliro-profile/tsconfig.spec.json",
+            "karmaConfig": "projects/ceeliro-profile/karma.conf.js",
+            "styles": [
+              "projects/ceeliro-profile/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/ceeliro-profile/src/favicon.ico",
+              "projects/ceeliro-profile/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceeliro-profile/tsconfig.app.json",
+              "projects/ceeliro-profile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-profile-e2e": {
+      "root": "projects/ceeliro-profile-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ceeliro-profile-e2e/protractor.conf.js",
+            "devServerTarget": "ceeliro-profile:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ceeliro-profile:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/ceeliro-profile-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-common": {
+      "root": "projects/ceeliro-common",
+      "sourceRoot": "projects/ceeliro-common/src",
+      "projectType": "library",
+      "prefix": "cl-common",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceeliro-common/tsconfig.lib.json",
+            "project": "projects/ceeliro-common/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceeliro-common/src/test.ts",
+            "tsConfig": "projects/ceeliro-common/tsconfig.spec.json",
+            "karmaConfig": "projects/ceeliro-common/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceeliro-common/tsconfig.lib.json",
+              "projects/ceeliro-common/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-charts": {
+      "root": "projects/ceeliro-charts",
+      "sourceRoot": "projects/ceeliro-charts/src",
+      "projectType": "library",
+      "prefix": "cl-charts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceeliro-charts/tsconfig.lib.json",
+            "project": "projects/ceeliro-charts/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceeliro-charts/src/test.ts",
+            "tsConfig": "projects/ceeliro-charts/tsconfig.spec.json",
+            "karmaConfig": "projects/ceeliro-charts/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceeliro-charts/tsconfig.lib.json",
+              "projects/ceeliro-charts/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-oauth": {
+      "root": "projects/ceeliro-oauth",
+      "sourceRoot": "projects/ceeliro-oauth/src",
+      "projectType": "library",
+      "prefix": "cl-oauth",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceeliro-oauth/tsconfig.lib.json",
+            "project": "projects/ceeliro-oauth/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceeliro-oauth/src/test.ts",
+            "tsConfig": "projects/ceeliro-oauth/tsconfig.spec.json",
+            "karmaConfig": "projects/ceeliro-oauth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceeliro-oauth/tsconfig.lib.json",
+              "projects/ceeliro-oauth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-forms": {
+      "root": "projects/ceeliro-forms",
+      "sourceRoot": "projects/ceeliro-forms/src",
+      "projectType": "library",
+      "prefix": "cl-forms",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceeliro-forms/tsconfig.lib.json",
+            "project": "projects/ceeliro-forms/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceeliro-forms/src/test.ts",
+            "tsConfig": "projects/ceeliro-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/ceeliro-forms/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceeliro-forms/tsconfig.lib.json",
+              "projects/ceeliro-forms/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ceeliro-amaterial": {
+      "root": "projects/ceeliro-amaterial",
+      "sourceRoot": "projects/ceeliro-amaterial/src",
+      "projectType": "library",
+      "prefix": "cl-amaterial",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ceeliro-amaterial/tsconfig.lib.json",
+            "project": "projects/ceeliro-amaterial/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ceeliro-amaterial/src/test.ts",
+            "tsConfig": "projects/ceeliro-amaterial/tsconfig.spec.json",
+            "karmaConfig": "projects/ceeliro-amaterial/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ceeliro-amaterial/tsconfig.lib.json",
+              "projects/ceeliro-amaterial/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "cf-rookies-prs"
 }
